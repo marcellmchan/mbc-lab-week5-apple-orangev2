@@ -116,4 +116,4 @@ if st.session_state.history:
     st.table(st.session_state.history)
 
 st.markdown("---")
-st.caption("Model: Transfer Learning MobileNetV2 (+ versi quantized TFLite) — Tugas Big Data LAS Week 2 — v2")
+st.caption("Model: Transfer Learning MobileNetV2 (+ versi quantized TFLite)")
