@@ -61,7 +61,7 @@ if "history" not in st.session_state:
 # ============================================================
 # UI
 # ============================================================
-st.title("Apple vs Orange Classifier — v2")
+st.title("Apple vs Orange Classifier")
 st.write("Upload gambar apel atau jeruk untuk diprediksi. Versi ini menambahkan breakdown "
          "probabilitas kedua kelas, riwayat prediksi, dan opsi model teroptimasi (TFLite).")
 
