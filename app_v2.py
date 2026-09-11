@@ -131,4 +131,3 @@ if st.session_state.history:
 
 st.markdown("---")
 st.caption("Model transfer learning MobileNetV2, dengan opsi versi teroptimasi (TFLite).")
-st.caption("Tugas Big Data LAS, iterasi kedua (Minggu 3–4).")
