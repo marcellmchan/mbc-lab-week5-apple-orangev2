@@ -18,16 +18,6 @@ CLASS_NAMES = ["Apple", "Orange"]  # index 0 -> Apple, index 1 -> Orange
 
 st.set_page_config(page_title="Apple vs Orange Classifier v2", page_icon="🍎", layout="centered")
 
-st.markdown("""
-<style>
-h1 { color: #2F4B3C; }
-.stButton>button { background: #2F4B3C; color: #FFFFFF; border: none; }
-.stButton>button:hover { background: #22362A; color: #FFFFFF; }
-div[role="radiogroup"] label { border: 1px solid #DCE3D0; border-radius: 4px; padding: 0.2rem 0.6rem; margin-right: 0.4rem; }
-.stProgress > div > div { background: #2F4B3C; }
-</style>
-""", unsafe_allow_html=True)
-
 
 # ============================================================
 # LOAD MODEL
@@ -71,8 +61,7 @@ if "history" not in st.session_state:
 # ============================================================
 # UI
 # ============================================================
-st.title("Apple vs Orange Classifier")
-st.caption("Versi 2")
+st.title("🍎 Apple vs Orange Classifier — v2")
 st.write("Upload gambar apel atau jeruk untuk diprediksi. Versi ini menambahkan breakdown "
          "probabilitas kedua kelas, riwayat prediksi, dan opsi model teroptimasi (TFLite).")
 
@@ -82,10 +71,7 @@ model_choice = st.radio(
     horizontal=True,
 )
 
-uploaded_file = st.file_uploader(
-    "Pilih gambar...", type=["jpg", "jpeg", "png"],
-    help="Gunakan foto satu buah dengan latar belakang polos untuk hasil terbaik.",
-)
+uploaded_file = st.file_uploader("Pilih gambar...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
@@ -130,4 +116,4 @@ if st.session_state.history:
     st.table(st.session_state.history)
 
 st.markdown("---")
-st.caption("Model transfer learning MobileNetV2, dengan opsi versi teroptimasi (TFLite).")
+st.caption("Model: Transfer Learning MobileNetV2 (+ versi quantized TFLite) — Tugas Big Data LAS Week 2 — v2")
